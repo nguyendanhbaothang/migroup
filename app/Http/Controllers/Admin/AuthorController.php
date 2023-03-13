@@ -43,7 +43,7 @@ class AuthorController extends Controller
         alert()->success('Thêm tác giả','thành công');
         return redirect()->route('authors.index');
     } catch (\Exception) {
-        alert()->success('Thêm tác giả','thất bại');
+        alert()->error('Thêm tác giả','thất bại');
         return redirect()->route('authors.index');
     }
     }
@@ -78,7 +78,7 @@ class AuthorController extends Controller
         alert()->success('Sửa tác giả','thành công');
         return redirect()->route('authors.index');
     } catch (\Exception) {
-        alert()->success('Sửa tác giả','thất bại');
+        alert()->error('Sửa tác giả','thất bại');
         return redirect()->route('authors.index');
     }
     }
@@ -94,7 +94,7 @@ class AuthorController extends Controller
         alert()->success('Xóa tác giả','thành công');
         return redirect()->route('authors.index');
     } catch (\Exception) {
-        alert()->success('Xóa tác giả','thất bại');
+        alert()->error('Xóa tác giả','thất bại');
         return redirect()->route('authors.index');
     }
     }

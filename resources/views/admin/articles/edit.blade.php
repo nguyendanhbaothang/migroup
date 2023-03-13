@@ -17,16 +17,10 @@
                                     <label class="form-label">Tiêu đề</label>
                                     <input type="text" class="form-control" value="{{ $article->title }}" name="title"
                                         placeholder="Tên tiêu đề">
-                                    @error('title')
-                                        <div style="color: red">{{ $message }}</div>
-                                    @enderror
                                 </div>
                                 <div class="col-12">
                                     <label class="form-label">Sự mô tả</label>
                                     <textarea class="form-control" placeholder="Nội dung" value="" name="content" rows="4" cols="4">{{ $article->content }}</textarea>
-                                    @error('content')
-                                        <div style="color: red">{{ $message }}</div>
-                                    @enderror
                                 </div>
                                 <div class="col-12">
                                     <label class="form-label">Ngày đăng</label>
@@ -34,9 +28,6 @@
                                         <div class="col-lg-9">
                                             <input type="text" class="form-control" value="{{ $article->date }}"
                                                 name="date" placeholder="Ngày đăng">
-                                            @error('date')
-                                                <div style="color: red">{{ $message }}</div>
-                                            @enderror
                                         </div>
                                         <div class="col-lg-3">
                                             <div class="input-group">
@@ -54,10 +45,6 @@
                                             {{ $category->name }}</option>
                                     @endforeach
                                 </select>
-                                @error('category_id')
-                                    <div style="color: red">{{ $message }}</div>
-                                @enderror
-
                                 <label class="form-label">Chọn thể Loại</label>
                                 <select name="author_id" id="" class="form-control">
                                     <option value="">--Vui lòng chọn--</option>

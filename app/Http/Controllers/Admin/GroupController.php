@@ -54,7 +54,7 @@ class GroupController extends Controller
         alert()->success('Thêm tên quyền','thành công');
         return redirect()->route('group.index');
     } catch (\Exception) {
-        alert()->success('Thêm tên quyền','thất bại');
+        alert()->error('Thêm tên quyền','thất bại');
         return redirect()->route('group.index');
     }
     }
@@ -99,7 +99,7 @@ class GroupController extends Controller
         alert()->success('Sửa tên quyền','thành công');
         return redirect()->route('group.index');
     } catch (\Exception) {
-        alert()->success('Sửa tên quyền','thất bại');
+        alert()->error('Sửa tên quyền','thất bại');
         return redirect()->route('group.index');
     }
     }
@@ -118,7 +118,7 @@ class GroupController extends Controller
         alert()->success('Xóa tên quyền','thành công');
         return redirect()->route('group.index');
     } catch (\Exception) {
-        alert()->success('Xóa tên quyền','thất bại');
+        alert()->error('Xóa tên quyền','thất bại');
         return redirect()->route('group.index');
     }
     }

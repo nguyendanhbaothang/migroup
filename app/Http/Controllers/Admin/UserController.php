@@ -76,7 +76,7 @@ try{
         $user->save();
         return redirect()->route('user.index');
     } catch (\Exception) {
-        alert()->success('Thêm nhân viên','thất bại');
+        alert()->error('Thêm nhân viên','thất bại');
         return redirect()->route('user.index');
     }
     }
@@ -133,7 +133,7 @@ try{
         $user->save();
         return redirect()->route('user.index');
     } catch (\Exception) {
-        alert()->success('Sửa nhân viên','thất bại');
+        alert()->error('Sửa nhân viên','thất bại');
         return redirect()->route('user.index');
     }
     }

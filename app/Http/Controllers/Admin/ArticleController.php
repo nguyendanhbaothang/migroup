@@ -51,12 +51,12 @@ class ArticleController extends Controller
         $article->date = $request->date;
         $article->category_id = $request->category_id;
         $article->author_id  = $request->author_id ;
-        $article->status = $request->status;
+        $article->status = 0;
         $article->save();
         alert()->success('Thêm bài viết','thành công');
         return redirect()->route('articles.index');
     } catch (\Exception) {
-        alert()->success('Thêm bài viết','thất bại');
+        alert()->error('Thêm bài viết','thất bại');
         return redirect()->route('articles.index');
     }
     }
@@ -109,7 +109,7 @@ class ArticleController extends Controller
         alert()->success('Sửa bài viết','thành công');
         return redirect()->route('articles.index');
     } catch (\Exception) {
-        alert()->success('Sửa bài viết','thất bại');
+        alert()->error('Sửa bài viết','thất bại');
         return redirect()->route('articles.index');
     }
     }
@@ -125,7 +125,7 @@ class ArticleController extends Controller
         alert()->success('Xóa bài viết','thành công');
         return redirect()->route('articles.index');
     } catch (\Exception) {
-        alert()->success('Xóa bài viết','thất bại');
+        alert()->error('Xóa bài viết','thất bại');
         return redirect()->route('articles.index');
     }
     }

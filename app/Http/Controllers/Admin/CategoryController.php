@@ -42,7 +42,7 @@ class CategoryController extends Controller
         alert()->success('Thêm thể loại','thành công');
         return redirect()->route('categories.index');
     } catch (\Exception) {
-        alert()->success('Thêm thể loại','thất bại');
+        alert()->error('Thêm thể loại','thất bại');
         return redirect()->route('categories.index');
     }
     }
@@ -65,7 +65,7 @@ class CategoryController extends Controller
         alert()->success('Sửa thể loại','thành công');
         return redirect()->route('categories.index');
     } catch (\Exception) {
-        alert()->success('Sửa thể loại','thất bại');
+        alert()->error('Sửa thể loại','thất bại');
         return redirect()->route('categories.index');
     }
     }
@@ -81,7 +81,7 @@ class CategoryController extends Controller
         alert()->success('Xóa thể loại','thành công');
         return redirect()->route('categories.index');
     } catch (\Exception) {
-        alert()->success('Xóa thể loại','thất bại');
+        alert()->error('Xóa thể loại','thất bại');
         return redirect()->route('categories.index');
     }
 }
